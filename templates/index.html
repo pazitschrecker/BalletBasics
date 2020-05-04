@@ -1,0 +1,36 @@
+<!-- Home Page -->
+
+<html>
+<head>
+  <!-- Add Bootstrap -->
+  <meta charset="utf-8">
+  <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>
+  <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <script src="../static/navigation.js"></script>
+
+  <style>
+
+
+  </style>
+</head>
+<body>
+  {% extends "layout.html" %}
+
+  {% block content %}
+
+  <div>
+    <center>
+      <h1>Welcome to Ballet Basics!</h1>
+      <h2>Where would you like to begin?</h2>
+
+      <button type="button" name="button" class="btn btn-outline-dark" id="learn_positions_btn">Learn Ballet Positions</button>
+
+      <button type="button" name="button" class="btn btn-outline-dark" id="take_quiz_button">Take the Quiz</button>
+    <center>
+
+  </div>
+
+  {% endblock %}
+</body>
+</html>

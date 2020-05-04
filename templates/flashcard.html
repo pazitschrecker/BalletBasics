@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <!--<link rel="stylesheet" src="..static/css/flashcard.css">-->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="../static/flashcard.js"></script>
+  <script src="../static/navigation.js"></script>
+
+  <script>
+    var term = {{term|tojson}}
+    var image = {{image|tojson}}
+    var division = {{division|tojson}}
+    var back = {{back|tojson}}
+    var id = {{id|tojson}}
+    var back_length = {{back_length|tojson}}
+    var tip = {{tip|tojson}}
+  </script>
+
+  <style media="screen">
+  /* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+  .flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 300px;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+  }
+
+  /* This container is needed to position the front and back side */
+  .flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  }
+
+  /* Do an horizontal flip when you move the mouse over the flip box container */
+  .flip-card:on .flip-card-inner {
+  transform: rotateY(180deg);
+  }
+
+  /* Position the front and back side */
+  .flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+  }
+
+  /* Style the front side (fallback if image is missing) */
+  .flip-card-front {
+  background-color: #bbb;
+  color: black;
+  }
+
+  /* Style the back side */
+  .flip-card-back {
+  background-color: lightpink;
+  color: white;
+  transform: rotateY(180deg);
+  }
+
+  .center {
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+  }
+  .image{
+    max-width: 50%;
+    height: auto;
+    align-items: middle;
+  }
+.left{
+  justify-content: left;
+  text-align: left;
+}
+.middle{
+  vertical-align: middle;
+}
+.move_btn{
+  margin-top: 100%;
+  margin-bottom: 100%;
+}
+
+.hide{
+  display: hidden;
+}
+
+.right{
+  justify-content: right;
+  align-items: right;
+}
+
+.bottom-front{
+  margin-top: 40px;
+}
+
+.bottom-back{
+  margin-top: 140px;
+}
+  </style>
+
+</head>
+
+<body>
+  {% extends "layout.html" %}
+
+  {% block content %}
+
+  <div class="container center">
+    <h1>{{division}} Positions</h1>
+    <div class="row">
+      <div class="col-md-2 d-flex justify-content-center middle">
+        <button type="button" name="button" class="prev_btn move_btn btn btn-secondary" id="prev_{{id}}">Back</button>
+      </div>
+
+      <div class="flip-card center col-md-8">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <div class="center row card-title capital">{{term}}</div>
+            <div class="center row">
+              <div class="container">
+                <img class="card-img-top image" src="{{image}}">
+              </div>
+              <div class="row center bottom-front">
+                Click to Flip
+              </div>
+            </div>
+          </div>
+          <div class="flip-card-back">
+            <h1>{{term}}</h1>
+            <ul class="left">
+            {% for i in range(back_length) %}
+            <li>{{back[i]}}</li>
+            {% endfor %}
+            </ul>
+            <div class="row center bottom-back">
+              Click to Flip
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-2 d-flex justify-content-center">
+        <button type="button" name="button" class="next_btn move_btn btn btn-secondary" id="next_{{id}}">Next</button>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-4">
+      </div>
+
+      <div class="col-md-4 center">
+        {{id}}/10
+      </div>
+
+      <div class="col-md-4 hidden right">
+        <button type="button" name="button" class="btn btn-secondary hide" id="start_reviewbtn_{{id}}">Review</button>
+      </div>
+    </div>
+  </div>
+
+  {% endblock %}
+</body>
+</html>

@@ -1,0 +1,175 @@
+<!-- Question 5: Drag-drop question -->
+
+<html>
+<head>
+  <!-- Add Bootstrap -->
+  <meta charset="utf-8">
+  <link rel="stylesheet"href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+  <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>
+  <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <script type="text/javascript" src="{{ url_for('static', filename = 'q5.js') }}"></script>
+
+
+  <script src="../static/quiz.js"></script>
+  <script src="../static/navigation.js"></script>
+
+  <script>
+  var score = {{score|tojson}}
+  var pics = {{pics|tojson}}
+  var n = {{n|tojson}}
+  var q = {{q|tojson}}
+  var choices = {{choices|tojson}}
+  var correct_phrase = {{correct_phrase|tojson}}
+  var wrong = {{wrong|tojson}}
+  </script>
+
+  <style media="screen">
+  .left{
+    align-items: left;
+  }
+  .right{
+    align-items: right;
+  }
+  .space_cards{
+    margin-left: 1vw;
+    margin-right: 1vw;
+    margin-bottom: 1vh;
+    margin-top: 1vh;
+  }
+  .card_title{
+    font-size: 2rem;
+  }
+  .center {
+    justify-content: center;
+    text-align: center;
+    align-items: middle;
+  }
+  .square{
+    border-width: 1px;
+    border-color: black;
+    border-style: solid;
+    padding-top: 70px;
+    padding-bottom: 70px;
+    text-align: center;
+    margin: 6px;
+    background-color: lightyellow;
+    margin: 10px;
+  }
+
+  .answer{
+    border-width: 1px;
+    border-color: black;
+    border-style: solid;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+    margin: 6px;
+    background-color: lightblue;
+    z-index: 1;
+    width: 90%;
+  }
+
+  .highlight{
+    background-color: lightpink;
+  }
+
+  .correct{
+    border-width: 4px;
+    border-color: green;
+    border-style: solid;
+  }
+
+  .incorrect{
+    border-width: 4px;
+    border-color: red;
+    border-style: solid;
+  }
+
+  </style>
+</head>
+
+<body>
+  {% extends "layout.html" %}
+
+  {% block content %}
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-9">
+        Question {{n}}: {{q}}
+      </div>
+      <div class="col-md-3">
+        Score: {{score}}/10
+      </div>
+    </div>
+    <div class="row hidden">
+      <div class="col-md-6 hidden feedback_section" id="fs{{n}}">
+      </div>
+      <div class="col-md-6">
+        <button class="hidden next_q_btn btn btn-outline-secondary" type="button" name="button" id="nextbtn_{{n}}">Next Question</button>
+      </div>
+      <div class="col-md-6 hidden">
+        <button class="hidden btn btn-outline-primary finish" type="button" name="button" id="finish_btn">Finish</button>
+      </div>
+    </div>
+
+    <div class="row">
+      <button type="button" name="button" class="btn btn-outline-dark" id="submit_answer">Submit Answer</button>
+
+    </div>
+
+      <div class="row" id="start_drop_{{n}}">
+      </div>
+
+      <div class="col-md-1">
+
+      </div>
+
+      <div class="row" id="end_drop{{n}}">
+        <div class="col-md-2 square end" id="end{{n}}_1">
+          {% if n == "10" %}
+          <img src={{choices[0]}} height="200px">
+          {% else %}
+          {{choices[0]}}
+          {% endif %}
+        </div>
+        <div class="col-md-2 square end" id="end{{n}}_2">
+          {% if n == "10" %}
+          <img src={{choices[1]}} height="200px">
+          {% else %}
+          {{choices[1]}}
+          {% endif %}
+        </div>
+        <div class="col-md-2 square end" id="end{{n}}_3">
+          {% if n == "10" %}
+          <img src={{choices[2]}} height="200px">
+          {% else %}
+          {{choices[2]}}
+          {% endif %}
+        </div>
+        <div class="col-md-2 square end" id="end{{n}}_4">
+          {% if n == "10" %}
+          <img src={{choices[3]}} height="200px">
+          {% else %}
+          {{choices[3]}}
+          {% endif %}
+        </div>
+        <div class="col-md-2 square end" id="end{{n}}_5">
+          {% if n == "10" %}
+          <img src={{choices[4]}} height="200px">
+          {% else %}
+          {{choices[4]}}
+          {% endif %}
+        </div>
+    </div>
+
+  </div>
+
+  </div>
+
+</div>
+
+{% endblock %}
+</body>
+</html>

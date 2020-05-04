@@ -1,0 +1,185 @@
+<!-- Home Page -->
+
+<html>
+<head>
+  <!-- Add Bootstrap -->
+  <meta charset="utf-8">
+  <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>
+  <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <script src="../static/quiz.js"></script>
+  <script src="../static/navigation.js"></script>
+
+  <script>
+    var score = {{score|tojson}}
+    var pics = {{pics|tojson}}
+    var n = {{n|tojson}}
+    var q = {{q|tojson}}
+    var choices = {{choices|tojson}}
+    var correct_phrase = {{correct_phrase|tojson}}
+    var wrong = {{wrong|tojson}}
+  </script>
+
+  <style media="screen">
+  .card:hover {
+    background-color: lightpink;
+  }
+  .left{
+    align-items: left;
+  }
+  .right{
+    align-items: right;
+  }
+  .space_cards{
+    margin-left: 1vw;
+    margin-right: 1vw;
+    margin-bottom: 1vh;
+    margin-top: 1vh;
+  }
+  .card_title{
+    font-size: 2rem;
+  }
+  .center{
+    justify-content: center;
+    text-align: center;
+    align-items: middle;
+  }
+  /*.blocky{
+    text-transform: uppercase;
+    font-weight: bold;
+  }*/
+  .picture{
+    max-width: 60%;
+  }
+  .green{
+    background-color: lightgreen;
+  }
+  .red{
+    background-color: #FAB9B9;
+  }
+  </style>
+</head>
+
+<body>
+  {% extends "layout.html" %}
+
+  {% block content %}
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-9">
+        Question {{n}}: {{q}}
+        {% if type == 'mc2' %}
+        <div class="row">
+          <img class="picture center" src={{pics[0]}} alt="">
+        </div>
+        {% endif %}
+      </div>
+      <div class="col-md-3">
+        Score: {{score}}/10
+      </div>
+    </div>
+    <div class="row hidden">
+      <div class="col-md-6 hidden feedback_section" id="fs{{n}}">
+      </div>
+      <div class="col-md-6">
+        <button class="hidden next_q_btn btn btn-outline-secondary" type="button" name="button" id="nextbtn_{{n}}">Next Question</button>
+      </div>
+    </div>
+    <div class="row center space_cards">
+      <div class="col-md-3 space_cards">
+        <div class="card quiz_answer " style="width: 18rem;" id="{{n}}_a">
+          <div class="center card_title" id="title_{{n}}_a">
+            a)
+          </div>
+          <hr>
+          <div class="card-body">
+            {% if type == 'mc2' %}
+            {{choices[0]}}
+            {% else %}
+            <img class="card-img-top" src="{{pics[0]}}">
+            {% endif %}
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-1">
+      </div>
+
+      <div class="col-md-3 space_cards">
+        <div class="card quiz_answer" style="width: 18rem;" id="{{n}}_b">
+          <div class="center card_title" id="title_{{n}}_b">
+            b)
+          </div>
+          <hr>
+          <div class="card-body">
+            {% if type == 'mc2' %}
+            {{choices[1]}}
+            {% else %}
+            <img class="card-img-top" src="{{pics[1]}}">
+            {% endif %}
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-1">
+      </div>
+
+      <div class="col-md-3 space_cards">
+        <div class="card quiz_answer" style="width: 18rem;" id="{{n}}_c">
+          <div class="center card_title" id="title_{{n}}_c">
+            c)
+          </div>
+          <hr>
+          <div class="card-body">
+            {% if type == 'mc2' %}
+            {{choices[2]}}
+            {% else %}
+            <img class="card-img-top" src="{{pics[2]}}">
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row center">
+      <div class="col-md-3 space_cards">
+        <div class="card quiz_answer" style="width: 18rem;" id="{{n}}_d">
+          <div class="center card_title" id="title_{{n}}_d">
+            d)
+          </div>
+          <hr>
+          <div class="card-body">
+            {% if type == 'mc2' %}
+            {{choices[3]}}
+            {% else %}
+            <img class="card-img-top" src="{{pics[3]}}">
+            {% endif %}
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-2">
+      </div>
+
+      <div class="col-md-3 space_cards">
+        <div class="card quiz_answer" style="width: 18rem;" id="{{n}}_e">
+          <div class="center card_title" id="title_{{n}}_e">
+            e)
+          </div>
+          <hr>
+          <div class="card-body">
+            {% if type == 'mc2' %}
+            {{choices[4]}}
+            {% else %}
+            <img class="card-img-top" src="{{pics[4]}}">
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {% endblock %}
+</body>
+</html>
