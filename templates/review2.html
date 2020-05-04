@@ -1,0 +1,120 @@
+<!-- Home Page -->
+
+<html>
+<head>
+  <!-- Add Bootstrap -->
+  <meta charset="utf-8">
+  <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <link rel="stylesheet" src="../css/flashcard.css"/>
+  <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>
+  <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <script src="../static/navigation.js"></script>
+</head>
+
+<style media="screen">
+.left{
+  float: left;
+}
+.right{
+  float: right;
+}
+.space_cards{
+  margin-left: 1vw;
+  margin-right: 1vw;
+  margin-bottom: 1vh;
+  margin-top: 1vh;
+}
+.card_title{
+  font-size: 2rem;
+}
+.center {
+  justify-content: center;
+  text-align: center;
+  align-items: middle;
+
+}
+</style>
+
+
+<body>
+  {% extends "layout.html" %}
+
+  {% block content %}
+
+  <div class="row center">
+    <div class="col-md-3 space_cards">
+      <div class="card" style="width: 18rem;">
+        <div class="center card_title">
+          First Position
+        </div>
+        <hr>
+        <div class="card-body">
+          <img class="card-img-top" src="../static/img/first_arms.jpg"></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-3 space_cards">
+      <div class="card" style="width: 18rem;">
+        <div class="center card_title">
+          Second Position
+        </div>
+        <hr>
+        <div class="card-body">
+          <img class="card-img-top" src="../static/img/second_arms.jpg"></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-3 space_cards">
+      <div class="card" style="width: 18rem;">
+        <div class="center card_title">
+          Third Position
+        </div>
+        <hr>
+        <div class="card-body">
+          <img class="card-img-top" src="../static/img/third_arms.jpg"></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row center">
+    <div class="col-md-3 space_cards">
+      <div class="card" style="width: 18rem;">
+        <div class="center card_title">
+          Fourth Position
+        </div>
+        <hr>
+        <div class="card-body">
+          <img class="card-img-top" src="../static/img/fourth_arms.jpg"></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-3 space_cards">
+      <div class="card" style="width: 18rem;">
+        <div class="center card_title">
+          Fifth Position
+        </div>
+        <hr>
+        <div class="card-body">
+          <img class="card-img-top" src="../static/img/fifth_arms.jpg"></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<div class="row">
+  <div class="col-md-6 left">
+    <button type="button" name="button" class="left btn btn-outline-primary" id="rev2_feet">Review Feet</button>
+  </div>
+
+  <div class="col-md-6 right">
+    <button type="button" name="button" class="left btn btn-outline-primary right" id="rev2_quiz">Quiz</button>
+  </div>
+</div>
+
+{% endblock %}
+</body>
+</html>

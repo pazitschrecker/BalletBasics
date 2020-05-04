@@ -1,0 +1,42 @@
+<!-- Home Page -->
+
+<html>
+<head>
+  <!-- Add Bootstrap -->
+  <meta charset="utf-8">
+  <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>
+  <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <script src="../static/navigation.js"></script>
+
+  <style>
+
+
+  </style>
+</head>
+<body>
+  {% extends "layout.html" %}
+
+  {% block content %}
+
+  <div>
+    <center>
+      <h1>Quiz</h1>
+      <p>
+        The quiz will have 10 questions based on the material you have just learned. The question will vary in type.
+        Some questions will be multiple choice and you need to click on the correct answer. For other questions, you will
+        be expected to drag ans drop elements or choose the correct answer from a list. If you want a better sense of the format,
+        you can try a sample question.<br>
+        Good Luck!
+      </p>
+
+      <button type="button" name="button" class="btn btn-outline-dark" id="sample_question_btn">Sample Question</button>
+
+      <button type="button" name="button" class="btn btn-outline-dark" id="begin_quiz_btn">Start Quiz</button>
+      <center>
+
+      </div>
+
+  {% endblock %}
+</body>
+</html>
