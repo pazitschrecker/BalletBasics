@@ -44,4 +44,6 @@ $(document).ready(function(){
   $("#start_reviewbtn_10").click(function(){
     window.location.href = "http://127.0.0.1:5000/checkpoint";
   })
+
+  
 })
