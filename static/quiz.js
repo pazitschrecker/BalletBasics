@@ -6,7 +6,7 @@ var display_answers = function(n, ans){
     console.log("creating!")
     var char = String.fromCharCode(index+97);
     var id = "ans"+n+"_"+ char;
-    var drag_answer = $("<div id='"+id+"' class='answer col-md-2'><img "+name+"></div>").draggable({
+    var drag_answer = $("<div id='"+id+"' class='answer'><img "+name+"></div>").draggable({
       revert: "invalid",
       drag: function(event, ui) {
         $("#end"+n).addClass('blue');
@@ -81,8 +81,10 @@ function render_feedback(id, feedback, correct, ans){
 
   var c = "#title_"+id+"_"+correct
   $(c).addClass("green")
+  $("#body_"+id+"_"+correct).addClass("green")
   if (ans != correct){
     $("#title_"+id+"_"+ans).addClass("red")
+    $("#body_"+id+"_"+ans).addClass("red")
   }
   $(".pic_correct").removeClass("hidden")
   $(".pic_correct").show()
