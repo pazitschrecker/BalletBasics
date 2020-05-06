@@ -5,27 +5,45 @@
   <!-- Add Bootstrap -->
   <meta charset="utf-8">
   <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
-  <!--<link rel="stylesheet" src="../css/flashcard.css"/>-->
+  <link rel="stylesheet" src="../css/flashcard.css"/>
   <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>
   <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-  <link rel="stylesheet" type="text/css" href="../static/css/review.css">
   <script src="../static/navigation.js"></script>
 </head>
 
 <style media="screen">
-.btn{
-  margin: 4px;
+.left{
+  float: left;
 }
+.right{
+  float: right;
+}
+.space_cards{
+  margin-left: 1vw;
+  margin-right: 1vw;
+  margin-bottom: 1vh;
+  margin-top: 1vh;
+}
+.card_title{
+  font-size: 2rem;
+}
+.center {
+  justify-content: center;
+  text-align: center;
+  align-items: middle;
 
+}
 </style>
+
 
 <body>
   {% extends "layout.html" %}
 
   {% block content %}
-  <h1 class="center">Review Arm Positions</h1><br>
-  <div class="container">
-      <div class="card space_cards" style="width: 18rem;">
+
+  <div class="row center">
+    <div class="col-md-3 space_cards">
+      <div class="card" style="width: 18rem;">
         <div class="center card_title">
           First Position
         </div>
@@ -34,8 +52,10 @@
           <img class="card-img-top" src="../static/img/first_arms.jpg"></a>
         </div>
       </div>
+    </div>
 
-      <div class="card space_cards" style="width: 18rem;">
+    <div class="col-md-3 space_cards">
+      <div class="card" style="width: 18rem;">
         <div class="center card_title">
           Second Position
         </div>
@@ -44,8 +64,10 @@
           <img class="card-img-top" src="../static/img/second_arms.jpg"></a>
         </div>
       </div>
+    </div>
 
-      <div class="card space_cards" style="width: 18rem;">
+    <div class="col-md-3 space_cards">
+      <div class="card" style="width: 18rem;">
         <div class="center card_title">
           Third Position
         </div>
@@ -54,8 +76,12 @@
           <img class="card-img-top" src="../static/img/third_arms.jpg"></a>
         </div>
       </div>
+    </div>
+  </div>
 
-      <div class="card space_cards" style="width: 18rem;">
+  <div class="row center">
+    <div class="col-md-3 space_cards">
+      <div class="card" style="width: 18rem;">
         <div class="center card_title">
           Fourth Position
         </div>
@@ -64,8 +90,10 @@
           <img class="card-img-top" src="../static/img/fourth_arms.jpg"></a>
         </div>
       </div>
+    </div>
 
-      <div class="card space_cards" style="width: 18rem;">
+    <div class="col-md-3 space_cards">
+      <div class="card" style="width: 18rem;">
         <div class="center card_title">
           Fifth Position
         </div>
@@ -75,26 +103,16 @@
         </div>
       </div>
     </div>
-
-    <div class="container">
-      <button type="button" name="button" class="btn btn-outline-secondary" id="rev2_feet">Review Feet</button>
-      <button type="button" name="button" class="btn btn-outline-secondary" id="rev2_flashcard">Back to Flashcards</button>
-      <button type="button" name="button" class="btn btn-outline-secondary" id="rev2_quiz">Quiz</button>
-    </div>
-
-  <!--<div class="col-md-2 justify-content-center">
-    <button type="button" class="btn btn-secondary btn-circle btn-md" id="rev1_back"> < </button>
   </div>
-  <div class="col-md-2 justify-content-center">
-    <button type="button" class="btn btn-secondary btn-circle btn-md" id="rev1_next"> > </button>
-  </div>-->
-  <!--<div class="col-md-6 left">
-    <button type="button" name="button" class="left btn btn-outline-primary" id="rev1_back">Back</button>
+
+<div class="row">
+  <div class="col-md-6 left">
+    <button type="button" name="button" class="left btn btn-outline-primary" id="rev2_feet">Review Feet</button>
   </div>
 
   <div class="col-md-6 right">
-    <button type="button" name="button" class="right btn btn-outline-primary" id="rev1_next">Next</button>
-  </div>-->
+    <button type="button" name="button" class="left btn btn-outline-primary right" id="rev2_quiz">Quiz</button>
+  </div>
 </div>
 
 {% endblock %}

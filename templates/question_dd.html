@@ -38,12 +38,10 @@
     border-width: 1px;
     border-color: black;
     border-style: solid;
-    padding-top: 70px;
-    padding-bottom: 70px;
     text-align: center;
-    margin: 6px;
     background-color: lightyellow;
-    margin: 10px;
+    margin: 6px;
+    padding: 40px;
   }
 
   .answer{
@@ -86,24 +84,49 @@
     <div class="row hidden">
       <div class="col-md-6 hidden feedback_section" id="fs{{n}}">
       </div>
-      <div class="col-md-6 hidden">
-        <button class="hidden btn btn-outline-primary finish" type="button" name="button" id="finish_btn">Finish</button>
-      </div>
     </div>
 
-    <div class="row">
-      <button type="button" name="button" class="btn btn-outline-dark" id="submit_answer">Submit Answer</button>
-
-    </div>
-
-      <div class="row start" id="start_drop_{{n}}">
+      <div class="container-row start" id="start_drop_{{n}}">
       </div>
 
-      <div class="col-md-1">
-
+      <div class="container-row" id="end_drop{{n}}">
+        <div class="square end item" id="end{{n}}_1">
+          {% if n == "10" %}
+          <img src={{choices[0]}} height="160px">
+          {% else %}
+          {{choices[0]}}
+          {% endif %}
+        </div>
+        <div class="square end item" id="end{{n}}_2">
+          {% if n == "10" %}
+          <img src={{choices[1]}} height="160px">
+          {% else %}
+          {{choices[1]}}
+          {% endif %}
+        </div>
+        <div class="square end" id="end{{n}}_3">
+          {% if n == "10" %}
+          <img src={{choices[2]}} height="160px">
+          {% else %}
+          {{choices[2]}}
+          {% endif %}
+        </div>
+        <div class="square end" id="end{{n}}_4">
+          {% if n == "10" %}
+          <img src={{choices[3]}} height="160px">
+          {% else %}
+          {{choices[3]}}
+          {% endif %}
+        </div>
+        <div class="square end" id="end{{n}}_5">
+          {% if n == "10" %}
+          <img src={{choices[4]}} height="160px">
+          {% else %}
+          {{choices[4]}}
+          {% endif %}
+        </div>
       </div>
-
-      <div class="row" id="end_drop{{n}}">
+      <!--<div class="row" id="end_drop{{n}}">
         <div class="col-md-2 square end" id="end{{n}}_1">
           {% if n == "10" %}
           <img src={{choices[0]}} height="200px">
@@ -139,9 +162,15 @@
           {{choices[4]}}
           {% endif %}
         </div>
+    </div>-->
+    <div class="center">
+      <button type="button" name="button" class="btn btn-outline-dark" id="submit_answer">Submit Answer</button>
     </div>
     <div class="left">
       <button class="hidden next_q_btn btn btn-outline-secondary left" type="button" name="button" id="nextbtn_{{n}}">Next Question</button>
+    </div>
+    <div class="left">
+      <button class="hidden btn btn-outline-primary finish" type="button" name="button" id="finish_btn">Finish</button>
     </div>
 
   </div>

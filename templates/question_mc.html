@@ -41,10 +41,10 @@
 
   <div class="container">
     <div class="row">
-      <div class="col-md-9">
-        Question {{n}}: {{q}}
+      <div class="col-md-9 question">
+        <strong>Question {{n}}</strong>: {{q}}
         {% if type == 'mc2' %}
-        <div class="row">
+        <div class="row center">
           <img class="picture center" src={{pics[0]}} alt="">
         </div>
         {% endif %}
@@ -59,12 +59,11 @@
     </div>
     <div class="row center space_cards">
       <div class="col-md-3 space_cards">
-        <div class="card quiz_answer " style="width: 18rem;" id="{{n}}_a">
+        <div class="card quiz_answer" style="width: 18rem;" id="{{n}}_a">
           <div class="center card_title" id="title_{{n}}_a">
             a)
           </div>
-          <hr>
-          <div class="card-body">
+          <div class="card-body" id="body_{{n}}_a">
             {% if type == 'mc2' %}
             {{choices[0]}}
             {% else %}
@@ -82,8 +81,7 @@
           <div class="center card_title" id="title_{{n}}_b">
             b)
           </div>
-          <hr>
-          <div class="card-body">
+          <div class="card-body" id="body_{{n}}_b">
             {% if type == 'mc2' %}
             {{choices[1]}}
             {% else %}
@@ -101,8 +99,7 @@
           <div class="center card_title" id="title_{{n}}_c">
             c)
           </div>
-          <hr>
-          <div class="card-body">
+          <div class="card-body" id="body_{{n}}_c">
             {% if type == 'mc2' %}
             {{choices[2]}}
             {% else %}
@@ -119,8 +116,7 @@
           <div class="center card_title" id="title_{{n}}_d">
             d)
           </div>
-          <hr>
-          <div class="card-body">
+          <div class="card-body" id="body_{{n}}_d">
             {% if type == 'mc2' %}
             {{choices[3]}}
             {% else %}
@@ -138,8 +134,7 @@
           <div class="center card_title" id="title_{{n}}_e">
             e)
           </div>
-          <hr>
-          <div class="card-body">
+          <div class="card-body" id="body_{{n}}_e">
             {% if type == 'mc2' %}
             {{choices[4]}}
             {% else %}
@@ -149,6 +144,7 @@
         </div>
       </div>
     </div>
+  </div>
     <div class="left">
       <button class="hidden next_q_btn btn btn-outline-secondary left" type="button" name="button" id="nextbtn_{{n}}">Next Question</button>
     </div>
