@@ -9,6 +9,11 @@
   <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
   <script src="../static/navigation.js"></script>
 
+  <script type="text/javascript">
+  score = {{score|tojson}}
+
+  </script>
+
   <style>
 
 
@@ -21,8 +26,8 @@
 
   <div>
     <center>
-      <h1>You've learned all the Positions!</h1>
-      <h2>Where would you like to begin?</h2>
+      <h1>Final Score: {{score}}/10</h1><br>
+      <h2>What would you like to do now?</h2><br>
 
       <button type="button" name="button" class="btn btn-outline-dark" id="final_review">Review Flashcards</button>
 

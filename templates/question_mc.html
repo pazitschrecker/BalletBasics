@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
   <script src="../static/quiz.js"></script>
   <script src="../static/navigation.js"></script>
+  <link rel="stylesheet" type="text/css" href="../static/css/quiz.css">
 
   <script>
     var score = {{score|tojson}}
@@ -21,42 +22,15 @@
   </script>
 
   <style media="screen">
-  .card:hover {
-    background-color: lightpink;
-  }
-  .left{
-    align-items: left;
-  }
-  .right{
-    align-items: right;
-  }
-  .space_cards{
-    margin-left: 1vw;
-    margin-right: 1vw;
-    margin-bottom: 1vh;
-    margin-top: 1vh;
-  }
-  .card_title{
-    font-size: 2rem;
-  }
   .center{
     justify-content: center;
     text-align: center;
     align-items: middle;
   }
-  /*.blocky{
-    text-transform: uppercase;
-    font-weight: bold;
-  }*/
   .picture{
     max-width: 60%;
   }
-  .green{
-    background-color: lightgreen;
-  }
-  .red{
-    background-color: #FAB9B9;
-  }
+
   </style>
 </head>
 
@@ -81,9 +55,6 @@
     </div>
     <div class="row hidden">
       <div class="col-md-6 hidden feedback_section" id="fs{{n}}">
-      </div>
-      <div class="col-md-6">
-        <button class="hidden next_q_btn btn btn-outline-secondary" type="button" name="button" id="nextbtn_{{n}}">Next Question</button>
       </div>
     </div>
     <div class="row center space_cards">
@@ -177,6 +148,9 @@
           </div>
         </div>
       </div>
+    </div>
+    <div class="left">
+      <button class="hidden next_q_btn btn btn-outline-secondary left" type="button" name="button" id="nextbtn_{{n}}">Next Question</button>
     </div>
   </div>
 

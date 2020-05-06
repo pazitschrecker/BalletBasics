@@ -8,7 +8,8 @@
   <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
   <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>
   <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-  <script type="text/javascript" src="{{ url_for('static', filename = 'q5.js') }}"></script>
+  <link rel="stylesheet" type="text/css" href="../static/css/quiz.css">
+  <!--<script type="text/javascript" src="{{ url_for('static', filename = 'q5.js') }}"></script>-->
 
 
   <script src="../static/quiz.js"></script>
@@ -25,18 +26,6 @@
   </script>
 
   <style media="screen">
-  .left{
-    align-items: left;
-  }
-  .right{
-    align-items: right;
-  }
-  .space_cards{
-    margin-left: 1vw;
-    margin-right: 1vw;
-    margin-bottom: 1vh;
-    margin-top: 1vh;
-  }
   .card_title{
     font-size: 2rem;
   }
@@ -58,16 +47,7 @@
   }
 
   .answer{
-    border-width: 1px;
-    border-color: black;
-    border-style: solid;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    text-align: center;
-    margin: 6px;
-    background-color: lightblue;
     z-index: 1;
-    width: 90%;
   }
 
   .highlight{
@@ -96,8 +76,8 @@
 
   <div class="container">
     <div class="row">
-      <div class="col-md-9">
-        Question {{n}}: {{q}}
+      <div class="col-md-9 question">
+        <strong>Question {{n}}</strong>: {{q}}
       </div>
       <div class="col-md-3">
         Score: {{score}}/10
@@ -105,9 +85,6 @@
     </div>
     <div class="row hidden">
       <div class="col-md-6 hidden feedback_section" id="fs{{n}}">
-      </div>
-      <div class="col-md-6">
-        <button class="hidden next_q_btn btn btn-outline-secondary" type="button" name="button" id="nextbtn_{{n}}">Next Question</button>
       </div>
       <div class="col-md-6 hidden">
         <button class="hidden btn btn-outline-primary finish" type="button" name="button" id="finish_btn">Finish</button>
@@ -119,7 +96,7 @@
 
     </div>
 
-      <div class="row" id="start_drop_{{n}}">
+      <div class="row start" id="start_drop_{{n}}">
       </div>
 
       <div class="col-md-1">
@@ -162,6 +139,9 @@
           {{choices[4]}}
           {% endif %}
         </div>
+    </div>
+    <div class="left">
+      <button class="hidden next_q_btn btn btn-outline-secondary left" type="button" name="button" id="nextbtn_{{n}}">Next Question</button>
     </div>
 
   </div>

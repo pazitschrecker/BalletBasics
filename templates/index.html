@@ -10,8 +10,43 @@
   <script src="../static/navigation.js"></script>
 
   <style>
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: space-between;
+  }
 
+  .space_out{
+    margin-top: 50px;
+  }
 
+  .center {
+    justify-content: center;
+    text-align: center;
+    align-items: middle;
+  }
+  .pad_btn{
+    margin: 20px;
+  }
+  body {
+    ;
+  }
+
+body:before {
+  content: "";
+  background: url('https://render.fineartamerica.com/images/rendered/default/greeting-card/images/artworkimages/medium/1/behind-the-scenes-at-the-ballet-ballet-watercolour-painting-ballerina-ballerinas-olga-belyaeva.jpg?&targetx=-1&targety=0&imagewidth=500&imageheight=700&modelwidth=500&modelheight=700&backgroundcolor=8F9FA4&orientation=1');
+  opacity: 0.4;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center; /* Center the image */
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+}
   </style>
 </head>
 <body>
@@ -19,15 +54,17 @@
 
   {% block content %}
 
-  <div>
-    <center>
+  <div class="container">
       <h1>Welcome to Ballet Basics!</h1>
       <h2>Where would you like to begin?</h2>
 
-      <button type="button" name="button" class="btn btn-outline-dark" id="learn_positions_btn">Learn Ballet Positions</button>
+      <button type="button" name="button" class="btn btn-lg btn-outline-dark pad_btn" id="learn_positions_btn">
+        <strong>Learn Positions</strong><br>
+      </button>
 
-      <button type="button" name="button" class="btn btn-outline-dark" id="take_quiz_button">Take the Quiz</button>
-    <center>
+      <button type="button" name="button" class="btn btn-lg btn-outline-dark pad_btn" id="take_quiz_button">
+        <strong>Take Quiz</strong><br>
+      </button>
 
   </div>
 

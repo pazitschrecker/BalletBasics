@@ -25,7 +25,7 @@
   background-color: transparent;
   width: 300px;
   height: 300px;
-  border: 1px solid #f1f1f1;
+  /*border: 1px solid #f1f1f1;*/
   perspective: 1000px; /* Remove this if you don't want the 3D effect */
   }
 
@@ -37,6 +37,10 @@
   text-align: center;
   transition: transform 0.8s;
   transform-style: preserve-3d;
+  }
+
+  .flip-card:hover .flip-card-inner{
+    transform: rotateY(20deg);
   }
 
   /* Do an horizontal flip when you move the mouse over the flip box container */
@@ -104,7 +108,22 @@
 .bottom-back{
   margin-top: 140px;
 }
-  </style>
+
+.btn-circle.btn-md {
+  width: 50px;
+  height: 50px;
+  padding: 7px 10px;
+  border-radius: 25px;
+  font-size: 10px;
+  text-align: center;
+  font-size: 20px;
+}
+
+.score{
+  font-size: 20px;
+  margin-top: 20px;
+}
+</style>
 
 </head>
 
@@ -116,8 +135,8 @@
   <div class="container center">
     <h1>{{division}} Positions</h1>
     <div class="row">
-      <div class="col-md-2 d-flex justify-content-center middle">
-        <button type="button" name="button" class="prev_btn move_btn btn btn-secondary" id="prev_{{id}}">Back</button>
+      <div class="col-md-2 justify-content-center">
+        <button type="button" class="btn btn-secondary btn-circle btn-md move_btn prev_btn" id="prev_{{id}}"> < </button>
       </div>
 
       <div class="flip-card center col-md-8">
@@ -147,15 +166,15 @@
         </div>
       </div>
 
-      <div class="col-md-2 d-flex justify-content-center">
-        <button type="button" name="button" class="next_btn move_btn btn btn-secondary" id="next_{{id}}">Next</button>
+      <div class="col-md-2 justify-content-center">
+        <button type="button" class="btn btn-secondary btn-circle btn-md next_btn move_btn" id="next_{{id}}"> > </button>
       </div>
     </div>
     <div class="row">
       <div class="col-md-4">
       </div>
 
-      <div class="col-md-4 center">
+      <div class="col-md-4 center score">
         {{id}}/10
       </div>
 
