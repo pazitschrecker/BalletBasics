@@ -1,0 +1,43 @@
+.left{
+  display: flex;
+  justify-content: flex-end;
+}
+
+.right{
+  display: flex;
+  justify-content: flex-start;
+}
+
+.card:hover {
+  background-color: #fff6cf;
+}
+
+.space_cards{
+  margin-left: 1vw;
+  margin-right: 1vw;
+  margin-bottom: 1vh;
+  margin-top: 1vh;
+}
+
+.center{
+  justify-content: center;
+  text-align: center;
+  align-items: middle;
+}
+
+.question{
+  font-size: 20px;
+}
+.card_title{
+  font-size: 2rem;
+}
+.green{
+  background-color: lightgreen;
+}
+.red{
+  background-color: #FAB9B9;
+}
+
+.hidden{
+  display: none;
+}
