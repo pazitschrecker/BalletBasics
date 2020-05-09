@@ -39,9 +39,9 @@
 
   {% block content %}
 
-  <div class="container">
-    <div class="row">
-      <div class="col-md-9 question">
+  <div class="container"><br>
+    <div class="container-row">
+      <div class="question">
         <strong>Question {{n}}</strong>: {{q}}
         {% if type == 'mc2' %}
         <div class="row center">
@@ -49,7 +49,7 @@
         </div>
         {% endif %}
       </div>
-      <div class="col-md-3">
+      <div class="score">
         Score: {{score}}/10
       </div>
     </div>
@@ -57,6 +57,8 @@
       <div class="col-md-6 hidden feedback_section" id="fs{{n}}">
       </div>
     </div>
+    <br>
+    <br>
     <div class="row center space_cards">
       <div class="col-md-3 space_cards">
         <div class="card quiz_answer" style="width: 18rem;" id="{{n}}_a">

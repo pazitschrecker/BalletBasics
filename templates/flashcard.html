@@ -64,6 +64,10 @@
   font-size: 20px;
   margin-top: 20px;
 }
+
+.capital{
+  text-transform: capitalize;
+}
 </style>
 
 </head>
@@ -85,15 +89,17 @@
             <div class="flip-card-front container-card">
               <div class="card-title">{{term}}</div>
                   <img class="card-img-top image" src="{{image}}">
+                  <br>
                   <button class="btn btn-outline-secondary"> Click to Flip </button>
             </div>
           <div class="flip-card-back container-card">
-            <div class="card-title">{{term}}</div>
+            <div class="card-title capital">{{term}}</div>
             <ul class="left">
             {% for i in range(back_length) %}
             <li>{{back[i]}}</li>
             {% endfor %}
             </ul>
+            <br>
                 <button class="btn btn-outline-secondary"> Click to Flip </button>
           </div>
         </div>
