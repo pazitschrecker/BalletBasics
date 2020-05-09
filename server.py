@@ -4,23 +4,9 @@ from flask import Response, request, jsonify
 app = Flask(__name__)
 
 
-current_id = 2
+current_id = 10
 score = 0
-non_ppc_people = [
-"Phyllis",
-"Dwight",
-"Oscar",
-"Creed",
-"Pam",
-"Jim",
-"Stanley",
-"Michael",
-"Kevin",
-"Kelly"
-]
-ppc_people = [
-"Angela"
-]
+
 flashcards = [
     {
         "id": 1,
@@ -161,15 +147,14 @@ answers = [
         "type": "mc2",
         "q": "Which position is this dancer standing in?",
         "correct": "b",
-        "a": "Incorrect. Third position looks like this",
+        "a": "Incorrect. Third position looks like this: <img src='../static/img/third_feet.jpg' height='200px' >",
         "b": "Correct!",
-        "c": "Incorrect. First position looks like this: ",
-        "d": "Incorrect. Second position looks like this: ",
-        "e": "Incorrect. Fifth position looks like this: ",
+        "c": "Incorrect. First position looks like this: <img src='../static/img/first_feet.jpg' height='200px' >",
+        "d": "Incorrect. Second position looks like this: <img src='../static/img/second_feet.jpg' height='200px' >",
+        "e": "Incorrect. Fifth position looks like this: <img src='../static/img/fifth_feet.jpg' height='200px' >",
         "choices": ["Third Position", "Fourth Position", "First Position", "Second Position", "Fifth Position"],
         "pics": ["../static/img/fourth_feet.jpg"],
-        "wrong": ["../static/img/first_feet.jpg", "../static/img/second_feet.jpg", "../static/img/third_feet.jpg",
-        "correct","../static/img/fifth_feet.jpg"],
+        "wrong": [],
         "correct_phrase": "This is actually fourth position.",
     },
     {
@@ -184,11 +169,11 @@ answers = [
         "e": "Correct!",
         "wrong": [],
         "choices": ["First Position", "Second Position", "Third Position", "Fourth Position", "Fifth Position"],
-        "pics": ["<img src='../../static/img/fourth_feet.jpg' height='100px'>",
-        "<img src='../../static/img/third_feet.jpg' height='100px'>",
-        "<img src='../../static/img/first_feet.jpg' height='100px'>",
-        "<img src='../../static/img/fifth_feet.jpg' height='100px'>",
-        "<img src='../../static/img/second_feet.jpg' height='100px'>",],
+        "pics": ["<img src='../../static/img/fourth_feet.jpg' height='100px'",
+        "<img src='../../static/img/third_feet.jpg' height='100px'",
+        "<img src='../../static/img/first_feet.jpg' height='100px'",
+        "<img src='../../static/img/fifth_feet.jpg' height='100px'",
+        "<img src='../../static/img/second_feet.jpg' height='100px'",],
         "correct_phrase": "In second position, the heels are apart and facing inwards.",
     },{
         "num": 6,
@@ -223,11 +208,11 @@ answers = [
         "type": "mc2",
         "q": "The dancer is holding their arms in which position?",
         "correct": "c",
-        "a": "Incorrect. First Position arms look like this: ",
-        "b": "Incorrect. Second Position arms look like this: ",
+        "a": "Incorrect. First position looks like this: <img src='../static/img/first_arms.jpg' height='200px' >",
+        "b": "Incorrect. Second position looks like this: <img src='../static/img/second_arms.jpg' height='200px' >",
         "c": "Correct! This is third position.",
-        "d": "Incorrect. Fourth position looks like this: ",
-        "e": "Incorrect. Fifth position look like this: ",
+        "d": "Incorrect. Fourth position looks like this: <img src='../static/img/fourth_arms.jpg' height='200px' >",
+        "e": "Incorrect. Fifth position looks like this: <img src='../static/img/fifth_arms.jpg' height='200px' >",
         "choices": ["First Position", "Second Position", "Third Position", "Fourth Position", "Fifth Position"],
         "pics": ["../static/img/third_arms.jpg"],
         "wrong": ["../static/img/first_arms.jpg", "../static/img/second_arms.jpg", "correct", "../static/img/fourth_arms.jpg",
@@ -347,7 +332,8 @@ def quiz(id=None):
 
 @app.route('/finish')
 def finish(id=None):
-    return render_template("finish.html")
+    global score
+    return render_template("finish.html", score=score)
 
 @app.route('/classes')
 def classes(id=None):
@@ -371,9 +357,10 @@ def check_answer(id=None):
     feedback = ""
     is_correct = 1
     correct = answers[question]["correct"]
+    type = answers[question]["type"]
 
 
-    if question == 5 or question == 10:
+    if type is "dd":
         feedback = []
         for i in range(5):
             if answer[i] != answers[question]["correct"][i]:
@@ -384,7 +371,6 @@ def check_answer(id=None):
 
         if is_correct == 1:
             score = score + 1
-
     else:
         feedback = answers[question][answer]
         if answers[question]["correct"] == answer:
