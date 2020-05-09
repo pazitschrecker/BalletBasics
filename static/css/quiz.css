@@ -26,7 +26,8 @@
 }
 
 .question{
-  font-size: 20px;
+  font-size: 26px;
+  margin: 6px;
 }
 .card_title{
   font-size: 2rem;
@@ -54,6 +55,11 @@
   padding: 4px;
 }
 
-.item {
-  flex-shrink: 3; /* default 1 */
+
+.score {
+  font-size: 20px;
+  border: 1px solid black;
+  border-radius: 16px;
+  text-align: center;
+  padding:10px;
 }

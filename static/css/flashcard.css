@@ -1,7 +1,7 @@
 .flip-card {
 background-color: transparent;
 width: 300px;
-height: 300px;
+height: 370px;
 /*border: 1px solid #f1f1f1;*/
 perspective: 1000px; /* Remove this if you don't want the 3D effect */
 }
@@ -46,7 +46,7 @@ text-transform: capitalize;
 .flip-card-back {
 background-color: #ffc0cb;
 color: black;
-text-transform: capitalize;
+font-size: 20px;
 transform: rotateY(180deg);
 }
 
@@ -79,6 +79,7 @@ transform: rotateY(180deg);
 }
 
 .card-title{
-  font-size: 20px;
+  font-size: 26px;
   test-transform: capitalize;
+  font-weight: bold;
 }
