@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <link rel="stylesheet" type="text/css" href="../static/css/flashcard.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <script src="../static/flashcard.js"></script>
   <script src="../static/navigation.js"></script>
 
@@ -27,7 +28,7 @@
     align-items: center;
   }
   .image{
-    max-width: 40%;
+    max-width: 70%;
     height: auto;
     align-items: middle;
   }
@@ -67,7 +68,20 @@
 
 .capital{
   text-transform: capitalize;
+  font-family: "Times New Roman", Times, serif;
 }
+
+body{
+  font-family: "Times New Roman", Times, serif;
+}
+i{
+  position: fixed;
+  left: 90%;
+  bottom: 5%;
+  opacity: 0.5;
+  transform: rotate(90deg);
+}
+
 </style>
 
 </head>
@@ -89,8 +103,7 @@
             <div class="flip-card-front container-card">
               <div class="card-title">{{term}}</div>
                   <img class="card-img-top image" src="{{image}}">
-                  <br>
-                  <button class="btn btn-outline-secondary"> Click to Flip </button>
+                  <i class="fa fa-share" style="font-size:48px;"></i>
             </div>
           <div class="flip-card-back container-card">
             <div class="card-title capital">{{term}}</div>
@@ -100,7 +113,7 @@
             {% endfor %}
             </ul>
             <br>
-                <button class="btn btn-outline-secondary"> Click to Flip </button>
+            <i class="fa fa-share" style="font-size:48px;"></i>
           </div>
         </div>
       </div>
