@@ -1,3 +1,7 @@
+.container{
+  justify-content: center;
+}
+
 .flip-card {
 background-color: transparent;
 width: 300px;
@@ -37,14 +41,14 @@ backface-visibility: hidden;
 /* Style the front side (fallback if image is missing) */
 .flip-card-front {
 background-color: #ffffff;
-border: 4px solid #ffc0cb;
+border: 4px solid #CFC3D4;
 color: black;
 text-transform: capitalize;
 }
 
 /* Style the back side */
 .flip-card-back {
-background-color: #ffc0cb;
+background-color: #CFC3D4;
 color: black;
 font-size: 20px;
 transform: rotateY(180deg);
@@ -52,7 +56,7 @@ transform: rotateY(180deg);
 
 .container-card {
   display: flex;
-  justify-content: center;
+  justify-content: stretch;
   flex-direction: column;
   align-content: space-between;
   align-items: center;

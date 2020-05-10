@@ -38,3 +38,7 @@
   font-size: 20px;
   margin: 10px;
 }
+
+.card:hover {
+  background-color: #CFC3D4;
+}

@@ -9,7 +9,7 @@
 }
 
 .card:hover {
-  background-color: #fff6cf;
+  background-color: #CFC3D4;
 }
 
 .space_cards{
@@ -36,7 +36,7 @@
   background-color: lightgreen;
 }
 .red{
-  background-color: #FAB9B9;
+  background-color: #ff6969;
 }
 
 .hidden{
@@ -62,4 +62,15 @@
   border-radius: 16px;
   text-align: center;
   padding:10px;
+}
+
+.feedback_section{
+  font-size: 20px;
+  padding: 6px;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+
+.nohover{
+  background-color: white;
 }
