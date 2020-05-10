@@ -18,7 +18,6 @@ var display_answers = function(n, ans){
 
 // render feedback for drag-drop questions
 var render_feedback_dd = function(n, feedback){
-  console.log(feedback)
   for (var i = 0; i < 5; i++){
     j = i+1
     if (feedback[i] == 1){
@@ -88,6 +87,12 @@ function render_feedback(id, feedback, correct, ans){
   }
   $(".pic_correct").removeClass("hidden")
   $(".pic_correct").show()
+
+  $(".card").hover(function() {
+    $(this).css("background-color", "transparent");},
+  function() {
+    $(this).css("background-color", "transparent");
+  });
 }
 
 // check answer (communicate with server)
