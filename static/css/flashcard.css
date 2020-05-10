@@ -40,8 +40,10 @@ backface-visibility: hidden;
 
 /* Style the front side (fallback if image is missing) */
 .flip-card-front {
+align-content: space-between;
+align-items: center;
 background-color: #ffffff;
-border: 4px solid #CFC3D4;
+border: 2px solid #CFC3D4;
 color: black;
 text-transform: capitalize;
 }
@@ -58,18 +60,8 @@ transform: rotateY(180deg);
   display: flex;
   justify-content: stretch;
   flex-direction: column;
-  align-content: space-between;
-  align-items: center;
   padding: 12px;
-}
-
-.flex-item {
-    display:flex;
-    align-items: center;
-}
-.flex-item img{
-    flex-grow:0;
-    flex-shrink:0;
+  font-size: 26px;
 }
 
 .btn-circle.btn-md {
@@ -83,7 +75,33 @@ transform: rotateY(180deg);
 }
 
 .card-title{
-  font-size: 26px;
+  font-size: 30px;
   test-transform: capitalize;
   font-weight: bold;
+  background-color: white;
+}
+
+.card-title-front{
+  font-size: 30px;
+  test-transform: capitalize;
+  font-weight: bold;
+  background-color: #CFC3D4;
+  padding-left: 20%;
+  padding-right: 20%;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  margin-bottom: 4px;
+}
+
+.card_num{
+  font-size: 20px;
+  margin: 20px;
+}
+
+.item-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  text-align: left;
+  align-content: space-between;
 }

@@ -75,7 +75,7 @@ body{
   font-family: "Times New Roman", Times, serif;
 }
 i{
-  position: fixed;
+  position: absolute;
   left: 90%;
   bottom: 5%;
   opacity: 0.5;
@@ -93,6 +93,7 @@ i{
 
   <div class="container center">
     <h1>{{division}} Positions</h1>
+
     <div class="row">
       <div class="col-md-2 justify-content-center">
         <button type="button" class="btn btn-secondary btn-circle btn-md move_btn prev_btn" id="prev_{{id}}"> < </button>
@@ -107,13 +108,13 @@ i{
             </div>
           <div class="flip-card-back container-card">
             <div class="card-title capital">{{term}}</div>
-            <ul class="left">
+            <ul class="left item-container">
             {% for i in range(back_length) %}
             <li>{{back[i]}}</li>
             {% endfor %}
             </ul>
             <br>
-            <i class="fa fa-share" style="font-size:48px;"></i>
+            <!--<i class="fa fa-share" style="font-size:48px;"></i>-->
           </div>
         </div>
       </div>
@@ -126,7 +127,7 @@ i{
       <div class="col-md-4">
       </div>
 
-      <div class="col-md-4 center score">
+      <div class="col-md-4 center card_num">
         {{id}}/10
       </div>
 
