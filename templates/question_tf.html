@@ -21,12 +21,6 @@
   </script>
 
   <style media="screen">
-  .space_cards{
-    margin-left: 1vw;
-    margin-right: 1vw;
-    margin-bottom: 1vh;
-    margin-top: 1vh;
-  }
   .card_title{
     font-size: 2rem;
   }
@@ -39,50 +33,54 @@
   {% block content %}
 
   <div class="container">
-    <div class="row">
-      <div class="col-md-9 question">
-        <strong>Question {{n}}</strong>: True or False: <br><br>{{q}}
-      </div>
-      <div class="col-md-3 score">
+
+    <div class="container-column">
+      <div class="score">
         Score: {{score}}/10
       </div>
-    </div>
-    <div class="row hidden">
-      <div class="hidden feedback_section" id="fs{{n}}">
+      <div class="question">
+        <strong>Question {{n}}</strong>: True or False:
+        <br>{{q}}
+      </div>
+      <div class="row hidden">
+        <div class="hidden feedback_section" id="fs{{n}}">
+        </div>
       </div>
     </div>
     <br>
     <br>
-    <div class="row center">
-      <div class="col-md-3">
-        <div class="card quiz_answer " style="width: 18rem;" id="{{n}}_true">
+    <div class="container-tf center">
+      <!--<div class="col-md-3">-->
+        <div class="card quiz_answer ans_tf" style="width: 18rem;" id="{{n}}_true">
           <div class="card-body" id="title_{{n}}_true">
             TRUE
           </div>
         </div>
-      </div>
+      <!--</div>-->
 
-      <div class="col-md-1">
-      </div>
-
-      <div class="col-md-3 space_cards">
-        <div class="card quiz_answer" style="width: 18rem;" id="{{n}}_false">
+      <!--<div class="col-md-3 space_cards">-->
+        <div class="card quiz_answer ans_tf" style="width: 18rem;" id="{{n}}_false">
           <div class="card-body" id="title_{{n}}_false">
             FALSE
           </div>
         </div>
       </div>
-    </div>
+    <!--</div>-->
 
-    <div class="row hidden">
-        <div class="col-md-5 hidden pic_correct">
+    <div class="container-column hidden">
+      <div class="hidden pic_correct">
+        For Reference:
+      </div>
+      <div class="container-row hidden">
+        <div class="hidden pic_correct">
           {{correct_phrase[0]}}<br>
           <img src="{{pics[0]}}" alt="" width="200px">
         </div>
-          <div class="col-md-5 hidden pic_correct">
+          <div class="hidden pic_correct">
             {{correct_phrase[1]}}<br>
             <img src="{{pics[1]}}" alt="" width="200px">
           </div>
+      </div>
         <br>
     </div>
     <div class="left">
