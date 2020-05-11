@@ -105,3 +105,47 @@ transform: rotateY(180deg);
   text-align: left;
   align-content: space-between;
 }
+
+.center {
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+.image{
+  max-width: 70%;
+  height: auto;
+  align-items: middle;
+}
+.left{
+justify-content: left;
+text-align: left;
+}
+.middle{
+vertical-align: middle;
+}
+.move_btn{
+margin-top: 100%;
+margin-bottom: 100%;
+}
+
+.hide{
+display: hidden;
+}
+
+.right{
+justify-content: right;
+align-items: right;
+}
+
+.capital{
+text-transform: capitalize;
+font-family: "Times New Roman", Times, serif;
+}
+
+i{
+position: absolute;
+left: 90%;
+bottom: 5%;
+opacity: 0.5;
+transform: rotate(90deg);
+}
