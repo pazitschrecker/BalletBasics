@@ -41,4 +41,5 @@
 
 .card:hover {
   background-color: #CFC3D4;
+  cursor:pointer;
 }
