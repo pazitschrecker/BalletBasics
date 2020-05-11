@@ -39,6 +39,10 @@
   background-color: #ff6969;
 }
 
+.lightred{
+  background-color: #ff9c9c;
+}
+
 .hidden{
   display: none;
 }
@@ -55,6 +59,17 @@
   padding: 4px;
 }
 
+.container-column{
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 4px;
+  padding: 4px;
+}
 
 .score {
   font-size: 20px;
@@ -62,15 +77,33 @@
   border-radius: 16px;
   text-align: center;
   padding:10px;
+  max-width: 30%;
+  margin-bottom: 10px;
 }
 
 .feedback_section{
   font-size: 20px;
   padding: 6px;
-  border: 1px solid black;
-  border-radius: 10px;
 }
 
-.nohover{
-  background-color: white;
+.container-tf{
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  align-items: space-around;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 4px;
+  padding: 4px;
+}
+
+.ans_tf{
+  margin-left: 1vw;
+  margin-right: 1vw;
+  margin-bottom: 1vh;
+  margin-top: 1vh;
+}
+
+.finish{
+  margin-left: 20px;
 }
