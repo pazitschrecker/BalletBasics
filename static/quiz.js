@@ -3,7 +3,6 @@ curr_answers = ["", "", "", "", ""]
 /* Start of used by drag-drop only */
 var display_answers = function(n, ans){
   $.each(ans, function(index,name){
-    console.log("creating!")
     var char = String.fromCharCode(index+97);
     var id = "ans"+n+"_"+ char;
     var drag_answer = $("<div id='"+id+"' class='answer'><img "+name+"></div>").draggable({
@@ -22,9 +21,11 @@ var render_feedback_dd = function(n, feedback){
     j = i+1
     if (feedback[i] == 1){
       $("#end"+n+"_"+j).addClass("correct")
+      $(".feedback_section").addClass("green")
     }
     else {
       $("#end"+n+"_"+j).addClass("incorrect")
+      $(".feedback_section").addClass("red")
     }
   }
   if (n == 10) {
@@ -34,6 +35,7 @@ var render_feedback_dd = function(n, feedback){
   else {
     $(".next_q_btn").show()
   }
+  $("#submit_answer").hide()
 }
 
 // check if answers are dropped correctly
@@ -84,6 +86,10 @@ function render_feedback(id, feedback, correct, ans){
   if (ans != correct){
     $("#title_"+id+"_"+ans).addClass("red")
     $("#body_"+id+"_"+ans).addClass("red")
+    $(".feedback_section").addClass("lightred")
+  }
+  else {
+    $(".feedback_section").addClass("green")
   }
   $(".pic_correct").removeClass("hidden")
   $(".pic_correct").show()
@@ -180,6 +186,9 @@ $(document).ready(function(){
       console.log("Current Answers: ", curr_answers)
       if ( (!(curr_answers.includes(""))) && ($(".next_q_btn").hasClass("hidden")) ) {
         check_answer_dd(n, curr_answers)
+      }
+      else {
+        alert("Not complete!")
       }
     })
 
