@@ -1,0 +1,21 @@
+.highlight{
+  background-color: #CFC3D4;
+}
+
+.container{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  margin-left: 20%;
+  margin-right: 20%;
+}
+
+p{
+  font-size: 26px;
+}
+
+.space_top{
+  margin-top: 30px;
+}
