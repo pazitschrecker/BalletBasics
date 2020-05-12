@@ -13,6 +13,7 @@ flashcards = [
         "term": "first position",
         "image": "../static/img/first_feet.jpg",
         "back": ["Heels together with toes pointing outwards.", "Aim for 180 degrees between feet."],
+        "alt": "Photo of dancer's lower body with feet in first position",
         "division": "Foot",
     },
     {
@@ -21,6 +22,7 @@ flashcards = [
         "image": "../static/img/second_feet.jpg",
         "back": ["Heels apart.","Think of first position, then slide the heels out.", "Heels should be one to two feet apart.",
         "Keep knees turned out as well."],
+        "alt": "Photo of dancer's lower body with feet in second position",
         "division": "Foot",
     },
     {
@@ -28,6 +30,7 @@ flashcards = [
         "term": "third position",
         "image": "../static/img/third_feet.jpg",
         "back": ["Feet are connected with one foot in front of the other.","Place heel of one foot near the arch of the other."],
+        "alt": "Photo of dancer's lower body with feet in third position",
         "division": "Foot",
     },
     {
@@ -36,16 +39,17 @@ flashcards = [
         "image": "../static/img/fourth_feet.jpg",
         "back": ["Similar to third position, but the feet are not touching.","Keep feet about one foot apart.",
         "Try to center your weight and upper body in between the two legs."],
-        "tip": "Try to center your weight and body in between the two legs.",
+        "alt": "Photo of dancer's lower body with feet in fourth position",
         "division": "Foot",
     },
     {
         "id": 5,
         "term": "fifth position",
         "image": "../static/img/fifth_feet.jpg",
-        "back": ["Toes of one foot aiming touch heel of the other foot.",
-        "Think fourth position, then slide feet so that they touch.",
+        "back": ["The toes of one foot are aiming to touch the heel of the other foot.",
+        "Think of fourth position, then slide feet so that they touch.",
         "Similar to third position, but more crossed."],
+        "alt": "Photo of dancer's lower body with feet in fifth position",
         "division": "Foot",
     },
     {
@@ -53,6 +57,7 @@ flashcards = [
         "term": "first position",
         "image": "../static/img/first_arms.jpg",
         "back": ["Arms are extended to the front in a circle.","Hands are almost touching.", "Wrists and hands should be slightly above the belly button."],
+        "alt": "Photo of dancer's upper body with arms in first position",
         "division": "Arm",
     },
     {
@@ -60,6 +65,7 @@ flashcards = [
         "term": "second position",
         "image": "../static/img/second_arms.jpg",
         "back": ["Arms open wide to the sides.", "Elbows slightly rounded and lifted.","Arms held at or slightly below shoulder height."],
+        "alt": "Photo of dancer's upper body with arms in second position",
         "division": "Arm",
     },
     {
@@ -67,6 +73,7 @@ flashcards = [
         "term": "third position",
         "image": "../static/img/third_arms.jpg",
         "back": ["One arm rounds in front, similar to first position.","Second arm extends to side similar to second position."],
+        "alt": "Photo of dancer's upper body with arms in third position",
         "division": "Arm",
     },
     {
@@ -76,6 +83,7 @@ flashcards = [
         "back": ["One arm rounds in front, similar to first position.",
         "Second arm above head, think of moving one arm from first position until it is almost over the head.",
         "Keep fingers relaxed and elbows slightly bent."],
+        "alt": "Photo of dancer's upper body with arms in fourth position",
         "division": "Arm",
     },
     {
@@ -84,6 +92,7 @@ flashcards = [
         "image": "../static/img/fifth_arms.jpg",
         "back": ["Both arms rounded, almost over head.", "Move arms from first position up about 80 degrees, keeping elbow position.",
         "Arms remain rounded into a circle.", "Avoid lifting shoulders."],
+        "alt": "Photo of dancer's upper body with arms in fifth position",
         "division": "Arm",
     },
 ]
@@ -103,6 +112,7 @@ answers = [
         "e": "Incorrect. That's actually fourth position.",
         "wrong": [],
         "choices": [],
+        "alt": "",
         "pics": ["../static/img/second_feet.jpg", "../static/img/third_feet.jpg",
         "../static/img/fifth_feet.jpg","../static/img/first_feet.jpg", "../static/img/fourth_feet.jpg"],
         "correct_phrase": "In first position, the heels are together.",
@@ -119,6 +129,7 @@ answers = [
         "e": "Correct!",
         "wrong": [],
         "choices" : [],
+        "alt": "",
         "pics": ["../static/img/first_feet.jpg", "../static/img/third_feet.jpg",
         "../static/img/fourth_feet.jpg","../static/img/fifth_feet.jpg", "../static/img/second_feet.jpg"],
         "correct_phrase": "In second position, the heels are apart and facing inwards.",
@@ -133,6 +144,7 @@ answers = [
         "wrong": [],
         "choices" : [],
         "pics": ["../static/img/third_feet.jpg", "../static/img/fifth_feet.jpg"],
+        "alt": "",
         "correct_phrase": ["Third Position", "Fifth Position"],
     },
     {
@@ -147,6 +159,7 @@ answers = [
         "e": "Incorrect.", #Fifth position looks like this: <img src='../static/img/fifth_feet.jpg' height='200px' >",
         "choices": ["Third Position", "Fourth Position", "First Position", "Second Position", "Fifth Position"],
         "pics": ["../static/img/fourth_feet.jpg"],
+        "alt": "Image of dancer's legs. Feet are turned out and separated with one foot in front of the other,, about 1 foot apart.",
         "wrong": [],
         "correct_phrase": "This is actually fourth position.",
     },
@@ -167,6 +180,7 @@ answers = [
         "<img src='../../static/img/first_feet.jpg' height='100px'",
         "<img src='../../static/img/fifth_feet.jpg' height='100px'",
         "<img src='../../static/img/second_feet.jpg' height='100px'",],
+        "alt": "",
         "correct_phrase": "In second position, the heels are apart and facing inwards.",
     },{
         "num": 6,
@@ -180,6 +194,7 @@ answers = [
         "e": "Incorrect. That's actually third position.",
         "wrong": [],
         "choices": [],
+        "alt": "",
         "pics": ["../static/img/fourth_arms.jpg", "../static/img/second_arms.jpg",
         "../static/img/first_arms.jpg","../static/img/fifth_arms.jpg", "../static/img/third_arms.jpg"],
         "correct_phrase": "In first position, the heels are together.",
@@ -194,6 +209,7 @@ answers = [
         "wrong": [],
         "choices" : [],
         "pics": ["../static/img/second_arms.jpg", "../static/img/fifth_arms.jpg"],
+        "alt": "",
         "correct_phrase": ["Second Position", "Fifth Position"],
     },
     {
@@ -210,6 +226,7 @@ answers = [
         "pics": ["../static/img/third_arms.jpg"],
         "wrong": ["../static/img/first_arms.jpg", "../static/img/second_arms.jpg", "correct", "../static/img/fourth_arms.jpg",
         "../static/img/fifth_arms.jpg"],
+        "alt": "Image of dancer's armms. One arm is extended to the side, the other is rounded with fingertips inline with the bellybutton.",
         "correct_phrase": "This is actually Third position.",
     },
     {
@@ -226,7 +243,13 @@ answers = [
         "choices" : [],
         "pics": ["../static/img/second_arms.jpg", "../static/img/fourth_arms.jpg",
         "../static/img/fifth_arms.jpg","../static/img/first_arms.jpg", "../static/img/third_arms.jpg"],
+        "alt": ["Image of dancer's arms. Arms are open and extended to the sides.",
+        "Image of dancer's arms. One arm is extended to the side, the other is rounded with fingertips inline with the bellybutton.",
+        "Image of dancer's arms. Arms are almost rounded and almost overhead.",
+        "Image of dancer's arms. Arms are rounded and roughly inline with the bellybutton.",
+        "Image of dancer's arms. One arm is rounded over the head, the other is rounded with fingertips inline with the bellybutton."],
         "correct_phrase": "In fifth position, the arms are rounded above the head.",
+        "alt": "",
     },
     {
         "num": 10,
@@ -247,6 +270,7 @@ answers = [
         "src='../static/img/fifth_arms2.jpg' height='120px'",
         "src='../static/img/third_arms2.jpg' height='120px'",],
         "correct_phrase": "In second position, the heels are apart and facing inwards.",
+        "alt": "",
     },
 
 ]
@@ -278,8 +302,8 @@ def view(id=None):
     back = c["back"]
     division = c["division"]
     back_length = len(back)
-    print(image)
-    return render_template('flashcard.html', id=id, term=term, image=image, back=back, back_length=back_length, division=division)
+    alt = c["alt"]
+    return render_template('flashcard.html', id=id, term=term, image=image, alt=alt, back=back, back_length=back_length, division=division)
 
 @app.route('/checkpoint')
 def checkpoint(id=None):
@@ -307,12 +331,13 @@ def quiz_question(num=None):
         type = answers[p]["type"]
         correct_phrase = answers[p]["correct_phrase"]
         wrong = answers[p]["wrong"]
+        alt = answers[p]["alt"]
         if (p == 3) or (p == 7): # true/false questions
-            return render_template("question_tf.html", score=score, pics=pics, n=n, q=q, type=type, correct_phrase=correct_phrase, wrong=wrong)
+            return render_template("question_tf.html", score=score, pics=pics, n=n, q=q, type=type, correct_phrase=correct_phrase, wrong=wrong, alt=alt)
         elif (p == 5) or (p == 10): # drag/drop questions
-            return render_template("question_dd.html", score=score, pics=pics, n=n, q=q, choices=choices, type=type, correct_phrase=correct_phrase,wrong=wrong)
+            return render_template("question_dd.html", score=score, pics=pics, n=n, q=q, choices=choices, type=type, correct_phrase=correct_phrase,wrong=wrong, alt=alt)
         else: # multiple choice question
-            return render_template("question_mc.html", score=score, pics=pics, n=n, q=q, choices=choices, type=type, correct_phrase=correct_phrase, wrong=wrong)
+            return render_template("question_mc.html", score=score, pics=pics, n=n, q=q, choices=choices, type=type, correct_phrase=correct_phrase, wrong=wrong, alt=alt)
 
 @app.route('/quiz')
 def quiz(id=None):
