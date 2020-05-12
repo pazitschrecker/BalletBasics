@@ -5,38 +5,28 @@
   <!-- Add Bootstrap -->
   <meta charset="utf-8">
   <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <link rel="stylesheet" src="../css/flashcard.css"/>
   <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>
   <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <script src="../static/flashcard.js"></script>
   <script src="../static/navigation.js"></script>
-
-  <style>
-  p{
-    font-size: 30px;
-  }
-
-
-  </style>
+  <link rel="stylesheet" type="text/css" href="../static/css/learn.css">
 </head>
+
 <body>
   {% extends "layout.html" %}
 
   {% block content %}
 
-  <div>
-    <center>
-      <h1>Quiz</h1>
-      <p>
-        The quiz will have 10 questions, some will be multiple choice and for other you will
-        be expected to drag and drop elements.<br><br>
-        Good Luck!
-      </p>
-
-      <!--<button type="button" name="button" class="btn btn-outline-dark" id="sample_question_btn">Sample Question</button>-->
-
-      <button type="button" name="button" class="btn btn-outline-dark btn-lg" id="begin_quiz_btn">Start Quiz</button>
-      <center>
-
-      </div>
+  <div class="container space_top">
+    <h1>Quiz</h1>
+    <p>
+      The quiz will have <span class="highlight">10 questions</span>, some will be multiple choice and for other you will
+      be expected to drag and drop elements.
+    </p>
+    <p>Good Luck!</p>
+    <button type="button" name="button" class="btn btn-outline-dark btn-lg" id="begin_quiz_btn">Start Quiz</button>
+    </div>
 
   {% endblock %}
 </body>

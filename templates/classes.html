@@ -8,9 +8,12 @@
   <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>
   <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
   <script src="../static/navigation.js"></script>
+  <link rel="stylesheet" type="text/css" href="../static/css/classes.css">
 
   <style>
-
+  h1{
+    font-weight: bold;
+  }
 
   </style>
 </head>
@@ -20,41 +23,54 @@
   {% block content %}
 
   <div>
-    <center>
+      <div class="container-column">
+        <br>
+      <h1>Ballet Classes For Beginners</h1>
       <br>
-      <h1>Virtual Ballet Classes For Beginners</h1><br>
 
-      <div class="card-deck res_row">
-  <div class="card">
-    <a href="https://www.instagram.com/patricia_zhou/?hl=en"><img class="card-img-top" src="https://instagram.flux1-1.fna.fbcdn.net/v/t51.2885-19/75458034_558105181413961_4794717849337724928_n.jpg?_nc_ht=instagram.flux1-1.fna.fbcdn.net&_nc_ohc=RfpNEC4qTlQAX8aK-Bh&oh=f73a67a3a1f49c8fbe3d0437b7db7150&oe=5EDD0516" alt=""></a>
-    <div class="card-body">
-      <h5 class="card-title">Patricia Zhou: Instagram Live</h5>
-    </div>
-  </div>
-  <div class="card">
-    <a href="https://markmorrisdancegroup.org/dance-center/adult-classes/"><img class="card-img-top" src="https://patch.com/img/biz/sites/default/files/users/23051032/20180713064844/4efad958-ac47-4e6f-a4c2-468eeb906702.jpeg" alt=""></a>
-    <div class="card-body">
-      <h5 class="card-title">Mark Morris Dance Center</h5>
-    </div>
-  </div>
-</div>
-<br>
-<div class="card-deck res_row">
-  <div class="card">
-    <a href="http://www.peridance.com/online-studio.cfm"><img class="card-img-top" src="https://pbs.twimg.com/profile_images/909811693454315521/JhLBptcA_400x400.jpg" alt=""></a>
-    <div class="card-body">
-      <h5 class="card-title">Peridance</h5>
-    </div>
-  </div>
-  <div class="card">
-    <a href="https://www.instagram.com/tilerpeck/?hl=en"><img class="card-img-top" src="https://vuenj.com/wp-content/uploads/2019/11/Tiler-2.jpg" alt=""></a>
-    <div class="card-body">
-      <h5 class="card-title">Tiler Peck: Instagram Live</h5>
-    </div>
-  </div>
-</div>
+      <h2>There are lots of places to start dancing at any level. <br>Click one of the options below to learn more!</h2><br>
 
-
+      <div class="container-row">
+        <div class="card item">
+          <a class=href="https://www.instagram.com/patricia_zhou/?hl=en"><img class="card-img-top" src="https://instagram.flux1-1.fna.fbcdn.net/v/t51.2885-19/75458034_558105181413961_4794717849337724928_n.jpg?_nc_ht=instagram.flux1-1.fna.fbcdn.net&_nc_ohc=RfpNEC4qTlQAX8aK-Bh&oh=f73a67a3a1f49c8fbe3d0437b7db7150&oe=5EDD0516" alt=""></a>
+          <div class="card-body">
+            <h5 class="card-title">Patricia Zhou (Instagram Live)</h5>
+          </div>
+        </div>
+        <div class="card item">
+          <a href="https://www.aileyextension.com/?_ga=2.265185423.1066675984.1589296778-1639573268.1589296778"><img class="card-img-top" src="https://www.aileyextension.com/sites/default/files/styles/default_manual_crop/public/extension_absolute_beginner_ballet_2_2.jpg?itok=9WDGHi-t" alt=""></a>
+          <div class="card-body">
+            <h5 class="card-title">Ailey Extension</h5>
+          </div>
+        </div>
+        <div class="card item">
+          <a href="http://www.peridance.com/online-studio.cfm"><img class="card-img-top" src="https://pbs.twimg.com/media/EVfYhc4WkAUD_hi.jpg" alt=""></a>
+          <div class="card-body">
+            <h5 class="card-title">Peridance</h5>
+          </div>
+        </div>
+      </div>
+      <div class="container-row">
+        <div class="card item">
+          <a href="https://www.instagram.com/tilerpeck/?hl=en"><img class="card-img-top" src="https://vuenj.com/wp-content/uploads/2019/11/Tiler-2.jpg" alt=""></a>
+          <div class="card-body">
+            <h5 class="card-title">Tiler Peck (Instagram Live)</h5>
+          </div>
+        </div>
+        <div class="card item">
+          <a href="https://markmorrisdancegroup.org/dance-center/adult-classes/"><img class="card-img-top" src="https://i.pinimg.com/originals/1b/ce/dd/1bceddbd48c8c528e0ec9c54290ce38b.jpg" alt=""></a>
+          <div class="card-body">
+            <h5 class="card-title">Mark Morris Dance Center</h5>
+          </div>
+        </div>
+        <div class="card item">
+          <a href="https://www.youtube.com/watch?v=yS5unBP96uY"><img class="card-img-top" src="https://i.ytimg.com/vi/1WlgHTqzTqM/hqdefault.jpg?sqp=-oaymwEZCNACELwBSFXyq4qpAwsIARUAAIhCGAFwAQ==&rs=AOn4CLAyNXK3rICFP846_XPmjrXroxGyQw" alt=""></a>
+          <div class="card-body">
+            <h5 class="card-title">Tips on Ballet Technique (YouTube)</h5>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 
   {% endblock %}
