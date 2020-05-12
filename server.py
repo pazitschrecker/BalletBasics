@@ -12,9 +12,7 @@ flashcards = [
         "id": 1,
         "term": "first position",
         "image": "../static/img/first_feet.jpg",
-        "back": ["Heels together with toes pointing outwards.", "Aim for 180 degrees between feet.",
-        "Make sure to turnout your entire leg starting at the hip, not just at your ankles. This may mean the angle between your feet has to be smaller than 180 degrees."],
-        "tip": "",
+        "back": ["Heels together with toes pointing outwards.", "Aim for 180 degrees between feet."],
         "division": "Foot",
     },
     {
@@ -23,15 +21,13 @@ flashcards = [
         "image": "../static/img/second_feet.jpg",
         "back": ["Heels apart.","Think of first position, then slide the heels out.", "Heels should be one to two feet apart.",
         "Keep knees turned out as well."],
-        "tip": "Keep knees turned out as well.",
         "division": "Foot",
     },
     {
         "id": 3,
         "term": "third position",
         "image": "../static/img/third_feet.jpg",
-        "back": ["Feet are connected with one foot in front of the other.","Place heel of one foot near the arch of the other.", "Maintain turnout from the hips and do not force more rotation at ankles or knees."],
-        "tip": "You can get into this position by sliding one foot from first position along the inside of the other; this will help you hold your turnout.",
+        "back": ["Feet are connected with one foot in front of the other.","Place heel of one foot near the arch of the other."],
         "division": "Foot",
     },
     {
@@ -49,9 +45,7 @@ flashcards = [
         "image": "../static/img/fifth_feet.jpg",
         "back": ["Toes of one foot aiming touch heel of the other foot.",
         "Think fourth position, then slide feet so that they touch.",
-        "Similar to third position, but more crossed.",
-        "Check your turnout by bending knees slightly and checking that your knees track over your toes."],
-        "tip": "Check your turnout by bending knees slightly and checking that your knees track over your toes.",
+        "Similar to third position, but more crossed."],
         "division": "Foot",
     },
     {
@@ -59,7 +53,6 @@ flashcards = [
         "term": "first position",
         "image": "../static/img/first_arms.jpg",
         "back": ["Arms are extended to the front in a circle.","Hands are almost touching.", "Wrists and hands should be slightly above the belly button."],
-        "tip": "Check your turnout by bending knees slightly and checking that your knees track over your toes.",
         "division": "Arm",
     },
     {
@@ -67,7 +60,6 @@ flashcards = [
         "term": "second position",
         "image": "../static/img/second_arms.jpg",
         "back": ["Arms open wide to the sides.", "Elbows slightly rounded and lifted.","Arms held at or slightly below shoulder height."],
-        "tip": "Check your turnout by bending knees slightly and checking that your knees track over your toes.",
         "division": "Arm",
     },
     {
@@ -75,7 +67,6 @@ flashcards = [
         "term": "third position",
         "image": "../static/img/third_arms.jpg",
         "back": ["One arm rounds in front, similar to first position.","Second arm extends to side similar to second position."],
-        "tip": "Check your turnout by bending knees slightly and checking that your knees track over your toes.",
         "division": "Arm",
     },
     {
@@ -84,8 +75,7 @@ flashcards = [
         "image": "../static/img/fourth_arms.jpg",
         "back": ["One arm rounds in front, similar to first position.",
         "Second arm above head, think of moving one arm from first position until it is almost over the head.",
-        "Keep fingers relaxes and elbows slightly bent."],
-        "tip": "Check your turnout by bending knees slightly and checking that your knees track over your toes.",
+        "Keep fingers relaxed and elbows slightly bent."],
         "division": "Arm",
     },
     {
@@ -94,7 +84,6 @@ flashcards = [
         "image": "../static/img/fifth_arms.jpg",
         "back": ["Both arms rounded, almost over head.", "Move arms from first position up about 80 degrees, keeping elbow position.",
         "Arms remain rounded into a circle.", "Avoid lifting shoulders."],
-        "tip": "Check your turnout by bending knees slightly and checking that your knees track over your toes.",
         "division": "Arm",
     },
 ]
@@ -271,10 +260,6 @@ def home():
 def start_quiz(name=None):
     return render_template('quiz.html')
 
-@app.route('/faq')
-def faq(name=None):
-    return render_template('faq.html')
-
 @app.route('/learn')
 def learn(name=None):
     return render_template('learn.html')
@@ -291,11 +276,10 @@ def view(id=None):
     term = c["term"]
     image = c["image"]
     back = c["back"]
-    tip = c["tip"]
     division = c["division"]
     back_length = len(back)
     print(image)
-    return render_template('flashcard.html', id=id, term=term, image=image, back=back, back_length=back_length, tip=tip, division=division)
+    return render_template('flashcard.html', id=id, term=term, image=image, back=back, back_length=back_length, division=division)
 
 @app.route('/checkpoint')
 def checkpoint(id=None):
