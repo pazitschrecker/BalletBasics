@@ -18,11 +18,16 @@
   var q = {{q|tojson}}
   var correct_phrase = {{correct_phrase|tojson}}
   var wrong = {{wrong|tojson}}
+  var alt = {{alt|tojson}}
   </script>
 
   <style media="screen">
   .card_title{
-    font-size: 2rem;
+    font-size: 1.4rem;
+  }
+
+  .border{
+    border: 1px gray solid;
   }
   </style>
 </head>
@@ -68,15 +73,15 @@
     <!--</div>-->
 
     <div class="container-column hidden">
-      <div class="hidden pic_correct">
+      <div class="hidden pic_correct card_title">
         For Reference:
       </div>
       <div class="container-row hidden">
-        <div class="hidden pic_correct">
+        <div class="hidden pic_correct space_cards border">
           {{correct_phrase[0]}}<br>
           <img src="{{pics[0]}}" alt="" width="200px">
         </div>
-          <div class="hidden pic_correct">
+          <div class="hidden pic_correct space_cards border">
             {{correct_phrase[1]}}<br>
             <img src="{{pics[1]}}" alt="" width="200px">
           </div>
