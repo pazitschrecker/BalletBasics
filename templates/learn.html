@@ -10,42 +10,22 @@
   <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
   <script src="../static/flashcard.js"></script>
   <script src="../static/navigation.js"></script>
+  <link rel="stylesheet" type="text/css" href="../static/css/learn.css">
 </head>
-
-<style media="screen">
-
-  .container{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-content: center;
-    align-items: center;
-  }
-
-  p{
-    font-size: 26px;
-  }
-</style>
-
 
 <body>
   {% extends "layout.html" %}
 
   {% block content %}
 
-  <div class="container">
+  <div class="container space_top">
     <h1>Are you ready to learn?</h1>
-    <p>
-      In ballet, there are five fundamental foot positions, first, second, third, fourth and fifth position.
+    <p class="space_top">
+      In ballet, there are <span class="highlight">five fundamental foot positions</span>, first, second, third, fourth and fifth position.
       All steps rely on familiarity and confidence with these positions.
-      Each foot position has a corresponding arm position.
+      <span class="highlight">Each foot position has a corresponding arm position</span> so you will learn a total of 10 positions.
     </p>
-    <p>
-      A few of these differ slightly by ballet style (French, Bournonville, Cecchetti, Russian, etc). However, most positions remain relatively the same.
-      Learning arm positions is important for adding grace and emotion to dance.
-      You will first learn the foot positions and then learn the corresponding arm positions.
-    <p>
-    <button type="button" name="button" class="btn btn-outline-dark btn-lg" id="start_learn_btn">Start Learning</button>
+    <button type="button" name="button" class="btn btn-outline-dark btn-lg space_top space_top" id="start_learn_btn">Start Learning</button>
     </div>
 
   {% endblock %}
