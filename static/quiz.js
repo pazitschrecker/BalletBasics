@@ -5,7 +5,7 @@ var display_answers = function(n, ans){
   $.each(ans, function(index,name){
     var char = String.fromCharCode(index+97);
     var id = "ans"+n+"_"+ char;
-    var drag_answer = $("<div id='"+id+"' class='answer'><img "+name+"></div>").draggable({
+    var drag_answer = $("<div id='"+id+"' class='answer move'><img "+name+"></div>").draggable({
       revert: "invalid",
       drag: function(event, ui) {
         $("#end"+n).addClass('blue');
@@ -35,7 +35,9 @@ var render_feedback_dd = function(n, feedback){
   else {
     $(".next_q_btn").show()
   }
+  $(".answer").draggable("disable")
   $("#submit_answer").hide()
+  $(".answer").css("cursor", "auto");
 }
 
 // check if answers are dropped correctly
@@ -70,6 +72,7 @@ function render_feedback(id, feedback, correct, ans){
   $(".feedback_section").append(feedback);
   $(".feedback_section").removeClass("hidden")
   $(".feedback_section").show()
+  $(".card").css("cursor", "auto");
   if (id == "10") {
     $("#finish_btn").removeClass("hidden")
     $("#finish_btn").show()
@@ -89,7 +92,7 @@ function render_feedback(id, feedback, correct, ans){
     $(".feedback_section").addClass("lightred")
   }
   else {
-    $(".feedback_section").addClass("green")
+    $(".feedback_section").addClass("lightgreen")
   }
   $(".pic_correct").removeClass("hidden")
   $(".pic_correct").show()
@@ -188,8 +191,17 @@ $(document).ready(function(){
         check_answer_dd(n, curr_answers)
       }
       else {
-        alert("Not complete!")
+        // open modal
+        $("#myModal").show();
       }
+    })
+
+    $(".close").click(function(){
+      $("#myModal").hide();
+    })
+
+    $(window).click(function(){
+      $("myModal").hide();
     })
 
     $(".quiz_answer").click(function(){
